@@ -21,43 +21,44 @@ namespace BlackJack
             kartyKrupiera += random.Next(1, 12); // Losowa liczba od 1 do 11
             kartyKrupiera += random.Next(1, 12); // Losowa liczba od 1 do 11
 
-            switch (karty)
+            if (kartyGracza > 21)
             {
-                case 1:
-                case 11:
-                    Console.WriteLine("Ace of Spades");
-                    break;
-                case 2:
-                    Console.WriteLine("Dwójka");
-                    break;
+                kartyGracza -= 10; //zabezpieczenie przed natychmiastową przegraną gracza
+            }
 
-                case 3:
-                    Console.WriteLine("Trójka");
+            if (kartyKrupiera > 21)
+            {
+                kartyKrupiera -= 10; //zabezpieczenie przed natychmiastową przegraną krupiera
+            }
+
+
+            //Początek kolejki gracza
+            while (true)
+            {
+                if (kartyGracza == 21)
+                {
+                    Console.WriteLine("Jesteś na 21!!");
                     break;
-                case 4:
-                    Console.WriteLine("Czwórka");
-                    break;
-                case 5:
-                    Console.WriteLine("Piątka");
-                    break;
-                case 6:
-                    Console.WriteLine("Szóstka");
-                    break;
-                case 7:
-                    Console.WriteLine("Siódemka");
-                    break;
-                case 8:
-                    Console.WriteLine("Ósemka");
-                    break;
-                case 9:
-                    Console.WriteLine("Dziewiątka");
-                    break;
-                case 10:
-                    Console.WriteLine("Dziesiątka, Walet, Królowa, Król");
-                    break;
-                default:
-                    Console.WriteLine("Joker");
-                    break;
+                }
+                Console.WriteLine("Jesteś na: " + kartyGracza.ToString() + "Dobierasz?");
+
+                string odpowiedz = Console.ReadLine();
+
+                if (odpowiedz == "Tak" || odpowiedz == "tak" || odpowiedz == "t" || odpowiedz == "T")
+                {
+
+                }
+
+                else if(odpowiedz == "Nie" || odpowiedz == "nie" || odpowiedz == "n" || odpowiedz == "N")
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("Niepoprawna odpowiedź, spróbuj jeszcze raz\nJeśli dobierasz wpisz Tak lub T/Jeśli zostajesz wpisz Nie lub N");
+                    continue;
+                }
+
             }
             Console.ReadLine();
         }
