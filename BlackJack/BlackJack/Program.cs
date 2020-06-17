@@ -40,26 +40,70 @@ namespace BlackJack
                     Console.WriteLine("Jesteś na 21!!");
                     break;
                 }
-                Console.WriteLine("Jesteś na: " + kartyGracza.ToString() + "Dobierasz?");
+                Console.WriteLine("Jesteś na: " + kartyGracza.ToString() + " Dobierasz?\nT lub N");
 
                 string odpowiedz = Console.ReadLine();
 
                 if (odpowiedz == "Tak" || odpowiedz == "tak" || odpowiedz == "t" || odpowiedz == "T")
                 {
+                    kartyGracza += random.Next(1, 12); // Losowa liczba od 1 do 11
+                    if (kartyGracza > 21)
+                    {
+                        Console.WriteLine("Masz za dużo oczek, Mission failed we will get him next time!");
+                        break;
+                    }
 
+                    else
+                    {
+                        continue;
+                    }
                 }
 
                 else if(odpowiedz == "Nie" || odpowiedz == "nie" || odpowiedz == "n" || odpowiedz == "N")
                 {
-
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Niepoprawna odpowiedź, spróbuj jeszcze raz\nJeśli dobierasz wpisz Tak lub T/Jeśli zostajesz wpisz Nie lub N");
+                    Console.WriteLine("Niepoprawna odpowiedź, spróbuj jeszcze raz!\nJeśli dobierasz wpisz Tak lub T\nJeśli zostajesz wpisz Nie lub N\n");
                     continue;
                 }
 
             }
+
+            //Początek kolejki Krupiera
+            Console.WriteLine("Jesteś na: " + kartyGracza.ToString());
+            
+            if (kartyGracza <= 21)
+            {
+                //Jeśli gracz nie przegrał
+                while (kartyKrupiera < 21 && kartyKrupiera < kartyGracza)
+                {
+                   kartyKrupiera += random.Next(1, 12); // Losowa liczba od 1 do 11
+                }
+                //Sprawdzamy kto wygrał
+                if (kartyGracza == kartyKrupiera)
+                {
+                    Console.WriteLine("Gracz zremisował z krupierem!\n Macie po "+kartyGracza.ToString() +" puntków!");
+                }
+                else if (kartyGracza < kartyKrupiera && kartyKrupiera <= 21)
+                {
+                    Console.WriteLine("Krupier wygrał z " + kartyKrupiera.ToString() +" punktami!");
+                }
+                else if (kartyKrupiera > 21)
+                {
+                    Console.WriteLine("Gracz wygrywa! Krupier wtopił ;)\nWartość kart krupiera: " + kartyKrupiera.ToString());
+                }
+                else if (kartyKrupiera == 21)
+                {
+                    Console.WriteLine("Krupier wygrał z 21 punkatmi!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Krupier wygrał ale wtopa ;/\n Wartość kart krupiera: " + kartyKrupiera.ToString());
+            }
+   
             Console.ReadLine();
         }
     }
