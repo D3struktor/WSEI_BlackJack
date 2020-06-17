@@ -15,11 +15,12 @@ namespace BlackJack
 
             Random random = new Random();
 
-            kartyGracza += random.Next(1, 12); // Losowa liczba od 1 do 11
-            kartyGracza += random.Next(1, 12); // Losowa liczba od 1 do 11
+            kartyGracza += random.Next(2, 12); // Losowa liczba od 2 do 11
+            kartyGracza += random.Next(2, 12); // Losowa liczba od 2 do 11
 
-            kartyKrupiera += random.Next(1, 12); // Losowa liczba od 1 do 11
-            kartyKrupiera += random.Next(1, 12); // Losowa liczba od 1 do 11
+            kartyKrupiera += random.Next(2, 12); // Losowa liczba od 2 do 11
+            Console.WriteLine("Pierwsza karta krupiera to " + kartyKrupiera.ToString());
+            kartyKrupiera += random.Next(2, 12); // Losowa liczba od 2 do 11
 
             if (kartyGracza > 21)
             {
@@ -46,7 +47,7 @@ namespace BlackJack
 
                 if (odpowiedz == "Tak" || odpowiedz == "tak" || odpowiedz == "t" || odpowiedz == "T")
                 {
-                    kartyGracza += random.Next(1, 12); // Losowa liczba od 1 do 11
+                    kartyGracza += random.Next(2, 12); // Losowa liczba od 2 do 11
                     if (kartyGracza > 21)
                     {
                         Console.WriteLine("Masz za dużo oczek, Mission failed we will get him next time!");
@@ -79,7 +80,7 @@ namespace BlackJack
                 //Jeśli gracz nie przegrał
                 while (kartyKrupiera < 21 && kartyKrupiera < kartyGracza)
                 {
-                   kartyKrupiera += random.Next(1, 12); // Losowa liczba od 1 do 11
+                   kartyKrupiera += random.Next(2, 12); // Losowa liczba od 2 do 11
                 }
                 //Sprawdzamy kto wygrał
                 if (kartyGracza == kartyKrupiera)
@@ -101,7 +102,7 @@ namespace BlackJack
             }
             else
             {
-                Console.WriteLine("Krupier wygrał ale wtopa ;/\n Wartość kart krupiera: " + kartyKrupiera.ToString());
+                Console.WriteLine("Krupier wygrał ale wtopa ;/\nWartość kart krupiera: " + kartyKrupiera.ToString());
             }
    
             Console.ReadLine();
