@@ -92,7 +92,7 @@ namespace BlackJack
                     //Sprawdzamy kto wygrał
                     if (kartyGracza == kartyKrupiera)
                     {
-                        Console.WriteLine("Gracz zremisował z krupierem!\n Macie po " + kartyGracza.ToString() + " puntków!");
+                        Console.WriteLine("Gracz zremisował z krupierem!\nMacie po " + kartyGracza.ToString() + " puntków!");
                     }
                     else if (kartyGracza < kartyKrupiera && kartyKrupiera <= 21)
                     {

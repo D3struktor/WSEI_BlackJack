@@ -4,7 +4,6 @@ C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\bin\Debug\netcoreapp3.
 C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\bin\Debug\netcoreapp3.1\BlackJack.runtimeconfig.dev.json
 C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\bin\Debug\netcoreapp3.1\BlackJack.dll
 C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\bin\Debug\netcoreapp3.1\BlackJack.pdb
-C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\netcoreapp3.1\BlackJack.csprojAssemblyReference.cache
 C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\netcoreapp3.1\BlackJack.csproj.CoreCompileInputs.cache
 C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\netcoreapp3.1\BlackJack.AssemblyInfoInputs.cache
 C:\Users\D3struktor\Desktop\BlackJack\BlackJack\BlackJack\obj\Debug\netcoreapp3.1\BlackJack.AssemblyInfo.cs
