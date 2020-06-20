@@ -10,7 +10,7 @@ namespace BlackJack
     {
         
         static void Main(string[] args)
-        {
+        {   
             Console.WriteLine("Witaj w kasynie, czy chcialbys zagrac w Black Jack?");
             Console.WriteLine("1.Gramy\n2.Odchodzisz od stołu");
             int gra = Convert.ToInt32(Console.ReadLine());
@@ -116,6 +116,7 @@ namespace BlackJack
                 gra = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine("Dziekuje za gre.");
+            Console.ReadKey();
         }
         
     }
